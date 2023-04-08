@@ -62,3 +62,21 @@ print(password)
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
+password_list = []
+ 
+for char in range(1, num_of_letters + 1):
+    password_list += random.choice(letters)
+
+for char in range(1, num_of_symbols + 1):
+    password_list += random.choice(symbols)
+
+for char in range(1, num_of_numbers + 1):
+    password_list += random.choice(numbers)
+
+random.suffle(password_list)
+
+password = ""
+for char in password_list:
+    password += char
+
+print(f"Your Password is: {password}")
