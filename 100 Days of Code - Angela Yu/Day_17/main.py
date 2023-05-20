@@ -10,7 +10,6 @@ class User:
         self.following += 1
 
 
-
 user1 = User("001", "visesh")
 
 print(user1.follower)
