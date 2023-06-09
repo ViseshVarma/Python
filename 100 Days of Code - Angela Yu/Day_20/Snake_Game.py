@@ -1,6 +1,7 @@
 from turtle import Screen
 from main import Snake
 from food import Food
+from ScoreBoard import Scoreboard
 import time
 
 # Setting up the Screen
@@ -12,6 +13,7 @@ screen.tracer(0)
 
 snake = Snake()
 food = Food()
+scoreboard = Scoreboard()
 
 screen.listen()
 screen.onkey(snake.up, "Up")
