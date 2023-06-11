@@ -53,6 +53,14 @@ while game_is_on:
         ball.reset_position()
         scoreboard.r_point()
 
+    # End the game when the score is equal to 3
+    if scoreboard.l_score >= 2:
+        scoreboard.game_over2()
+        game_is_on = False
+    elif scoreboard.r_score >= 2:
+        scoreboard.game_over1()
+        game_is_on = False
+
 
 # To exit from the game when any part of the window is clicked
 screen.exitonclick()
