@@ -1,3 +1,4 @@
+# Run this file for the game to start.
 from turtle import Screen
 from paddle import Paddle
 from ball import Ball
