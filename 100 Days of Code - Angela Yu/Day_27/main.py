@@ -7,6 +7,7 @@ window.minsize(width=500, height=300)
 # Label
 my_label = Label(text="I am a Label", font=("Ariel", 24))
 my_label.pack()
+my_label.place(x=0, y=0)
 
 my_label["text"] = "New Text"
 
