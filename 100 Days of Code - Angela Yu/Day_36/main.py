@@ -1,8 +1,8 @@
 import requests
 from twilio.rest import Client
 
-VIRTUAL_TWILIO_NUMBER = "your virtual twilio number"
-VERIFIED_NUMBER = "your own phone number verified with Twilio"
+VIRTUAL_TWILIO_NUMBER = "+16187762669"
+VERIFIED_NUMBER = "+918497901221"
 
 STOCK_NAME = "TSLA"
 COMPANY_NAME = "Tesla Inc"
@@ -12,8 +12,8 @@ NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 
 STOCK_API_KEY = "7R9X4QFL47SHETP8"
 NEWS_API_KEY = "d9abb8bdc26b448d96d6e06c61f34eb3"
-TWILIO_SID = "AC47ed43e3c167d38f5d813eaeb301a14f"
-TWILIO_AUTH_TOKEN = "ae928fbf2440e1944126282504b59bfa"
+TWILIO_SID = "AC3a75b59935902e7495c865cc98c059cb"
+TWILIO_AUTH_TOKEN = "5cf169d8be83932b67c474d544ab8b78"
 
 ## STEP 1: Use https://www.alphavantage.co/documentation/#daily
 # When stock price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
@@ -78,7 +78,7 @@ if abs(diff_percent) > 1:
     #TODO 8. - Send each article as a separate message via Twilio.
     for article in formatted_articles:
         message = client.messages.create(
-            body=article,
             from_=VIRTUAL_TWILIO_NUMBER,
+            body=article,
             to=VERIFIED_NUMBER
         )
