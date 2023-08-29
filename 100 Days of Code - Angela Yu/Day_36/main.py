@@ -12,8 +12,8 @@ NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 
 STOCK_API_KEY = "7R9X4QFL47SHETP8"
 NEWS_API_KEY = "d9abb8bdc26b448d96d6e06c61f34eb3"
-TWILIO_SID = "AC3a75b59935902e7495c865cc98c059cb"
-TWILIO_AUTH_TOKEN = "5cf169d8be83932b67c474d544ab8b78"
+TWILIO_SID = "your twilio sid"
+TWILIO_AUTH_TOKEN = "paste auth token for testing"
 
 ## STEP 1: Use https://www.alphavantage.co/documentation/#daily
 # When stock price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
