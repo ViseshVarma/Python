@@ -1,7 +1,10 @@
 import requests
 
+from datetime import datetime
+
 USERNAME = "visesh"
 Token = "lkhsdfksdflkjasdfasfhwuer"
+Graph_ID = "graph1"
 
 pixela_endpoint = "https://pixe.la/v1/users"
 
@@ -18,17 +21,28 @@ user_params = {
 graph_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs"
 
 graph_config = {
-    "id": "graph1",
+    "id": Graph_ID,
     "name": "Python Course",
     "unit": "videos",
     "type": "int",
-    "color": "kuro"
+    "color": "sora"
 }
 
 headers = {
     "X-USER-TOKEN": Token
 }
 
-response = requests.post(url=graph_endpoint, json=graph_config, headers=headers)
-print(response.text)
+# response = requests.post(url=graph_endpoint, json=graph_config, headers=headers)
+# print(response.text)
 
+pixel_creation_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{Graph_ID}"
+
+today = datetime(year=2023, month=9, day=2)
+
+pixel_data = {
+    "date": today.strftime("%Y%m%d"),
+    "quantity": "10",
+}
+
+response = requests.post(url=pixel_creation_endpoint, json=pixel_data, headers=headers)
+print(response.text)
